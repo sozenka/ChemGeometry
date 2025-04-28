@@ -41,7 +41,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Linéaire',
     angles: '180°',
     polarity: 'non polaire',
-    imageUrl: 'https://images.pexels.com/photos/linear-molecule.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1f/AX2E0-2D.png',
     description: 'Forme la plus simple avec deux liaisons alignées à 180°'
   },
   {
@@ -51,7 +51,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Triangulaire plane',
     angles: '120°',
     polarity: 'non polaire',
-    imageUrl: 'https://images.pexels.com/photos/trigonal-planar.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/AX3E0-2D.png',
     description: 'Trois liaisons dans un plan formant des angles égaux de 120°'
   },
   {
@@ -61,7 +61,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Angulaire Plane',
     angles: '<120°',
     polarity: 'polaire',
-    imageUrl: 'https://images.pexels.com/photos/angular-planar.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/60/AX2E1-2D.png',
     description: 'Deux liaisons et un doublet non liant dans un plan'
   },
   {
@@ -71,7 +71,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Tétraédrique',
     angles: '109,5°',
     polarity: 'non polaire',
-    imageUrl: 'https://images.pexels.com/photos/tetrahedral.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/27/AX4E0-2D.png',
     description: 'Quatre liaisons formant un tétraèdre parfait'
   },
   {
@@ -79,9 +79,9 @@ export const molecularGeometries: MolecularGeometry[] = [
     hybridization: 'sp³',
     class: 'AB₃E',
     shape: 'Pyramidale',
-    angles: '<109.5°',
+    angles: '<109,5°',
     polarity: 'polaire',
-    imageUrl: 'https://images.pexels.com/photos/pyramidal.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/AX3E1-2D.png',
     description: 'Trois liaisons et un doublet non liant formant une pyramide'
   },
   {
@@ -89,9 +89,9 @@ export const molecularGeometries: MolecularGeometry[] = [
     hybridization: 'sp³',
     class: 'AB₂E₂',
     shape: 'Angulaire Plane',
-    angles: '<109.5°',
+    angles: '<109,5°',
     polarity: 'polaire',
-    imageUrl: 'https://images.pexels.com/photos/angular-sp3.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d8/AX2E2-2D.png',
     description: 'Deux liaisons et deux doublets non liants'
   },
   {
@@ -101,7 +101,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Bipyramidale',
     angles: '90°, 120°',
     polarity: 'non polaire',
-    imageUrl: 'https://images.pexels.com/photos/trigonal-bipyramidal.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/AX5E0-2D.png',
     description: 'Cinq liaisons formant deux pyramides triangulaires opposées'
   },
   {
@@ -109,9 +109,9 @@ export const molecularGeometries: MolecularGeometry[] = [
     hybridization: 'sp³d',
     class: 'AB₄E',
     shape: 'À bascule',
-    angles: '109.5°, 120°',
+    angles: '~90°, ~120°',
     polarity: 'polaire',
-    imageUrl: 'https://images.pexels.com/photos/seesaw.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/12/AX4E1-2D.png',
     description: 'Quatre liaisons et un doublet non liant en forme de balançoire'
   },
   {
@@ -121,7 +121,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'En T',
     angles: '90°',
     polarity: 'polaire',
-    imageUrl: 'https://images.pexels.com/photos/t-shaped.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/AX3E2-2D.png',
     description: 'Trois liaisons formant un T avec deux doublets non liants'
   },
   {
@@ -131,7 +131,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Linéaire',
     angles: '180°',
     polarity: 'non polaire',
-    imageUrl: 'https://images.pexels.com/photos/linear-sp3d.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/64/AX2E3-2D.png',
     description: 'Deux liaisons alignées avec trois doublets non liants'
   },
   {
@@ -141,7 +141,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Octaédrique',
     angles: '90°',
     polarity: 'non polaire',
-    imageUrl: 'https://images.pexels.com/photos/octahedral.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/AX6E0-2D.png',
     description: 'Six liaisons formant un octaèdre régulier'
   },
   {
@@ -151,7 +151,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Pyramidale à base carrée',
     angles: '~90°',
     polarity: 'polaire',
-    imageUrl: 'https://images.pexels.com/photos/square-pyramidal.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/AX5E1-2D.png',
     description: 'Cinq liaisons et un doublet non liant en pyramide à base carrée'
   },
   {
@@ -161,7 +161,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Carré plan',
     angles: '90°',
     polarity: 'non polaire',
-    imageUrl: 'https://images.pexels.com/photos/square-planar.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/10/AX4E2-2D.png',
     description: 'Quatre liaisons dans un plan carré avec deux doublets non liants'
   }
 ];

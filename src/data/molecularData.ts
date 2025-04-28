@@ -51,7 +51,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     shape: 'Triangulaire plane',
     angles: '120°',
     polarity: 'non polaire',
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/AX3E0-2D.png',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/AX3E0-side-2D.png',
     description: 'Trois liaisons dans un plan formant des angles égaux de 120°'
   },
   {

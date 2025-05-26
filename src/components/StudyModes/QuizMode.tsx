@@ -16,7 +16,7 @@ const QuizMode: React.FC = () => {
   useEffect(() => {
     if (Array.isArray(filteredGeometries) && filteredGeometries.length > 0) {
       const shuffled = [...filteredGeometries].sort(() => Math.random() - 0.5);
-      const selected = shuffled.slice(0, Math.min(10, shuffled.length));
+      const selected = shuffled.slice(0, Math.min(13, shuffled.length));
       setCurrentQuestions(selected);
       setCurrentIndex(0);
       setSelectedOption(null);
@@ -32,22 +32,29 @@ const QuizMode: React.FC = () => {
     }
   }, [currentIndex, currentQuestions]);
 
-  const generateOptions = () => {
-    const currentGeometry = currentQuestions[currentIndex];
-    if (!currentGeometry) return;
+const generateOptions = () => {
+  
+  const currentGeometry = currentQuestions[currentIndex];
+  if (!currentGeometry) return;
 
-    const otherGeometries = filteredGeometries
-      .filter(geo => geo.id !== currentGeometry.id)
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 3);
-    
-    const allOptions = [
-      currentGeometry.shape,
-      ...otherGeometries.map(geo => geo.shape)
-    ].sort(() => Math.random() - 0.5);
-    
-    setOptions(allOptions);
-  };
+  // Get 3 other unique shapes different from current
+  const otherGeometries = filteredGeometries
+    .filter(geo => geo.shape !== currentGeometry.shape)
+    .sort(() => Math.random() - 0.5);
+
+  const uniqueOptions = new Set<string>();
+  uniqueOptions.add(currentGeometry.shape);
+
+  for (const geo of otherGeometries) {
+    if (uniqueOptions.size >= 4) break;
+    uniqueOptions.add(geo.shape);
+  }
+
+  // Shuffle the options
+  const allOptions = Array.from(uniqueOptions).sort(() => Math.random() - 0.5);
+  setOptions(allOptions);
+};
+
 
   const handleSelectOption = (option: string) => {
     if (result !== null) return;
@@ -71,15 +78,15 @@ const QuizMode: React.FC = () => {
     } else {
       setQuizCompleted(true);
       updateProgress({
-        completedSessions: prev => prev + 1,
-        totalStudied: prev => prev + currentQuestions.length
+        completedSessions: (score.total > 0 ? 1 : 0),
+        totalStudied: currentQuestions.length
       });
     }
   };
 
   const handleRestartQuiz = () => {
     const shuffled = [...filteredGeometries].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, Math.min(10, shuffled.length));
+    const selected = shuffled.slice(0, Math.min(13, shuffled.length));
     setCurrentQuestions(selected);
     setCurrentIndex(0);
     setSelectedOption(null);

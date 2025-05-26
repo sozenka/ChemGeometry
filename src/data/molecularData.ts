@@ -8,25 +8,25 @@ export const categories: Category[] = [
     count: 1
   },
   {
-    id: 'sp2',
+    id: 'sp²',
     name: 'sp²',
     icon: 'Triangle',
     count: 2
   },
   {
-    id: 'sp3',
+    id: 'sp³',
     name: 'sp³',
     icon: 'Box',
     count: 3
   },
   {
-    id: 'sp3d',
+    id: 'sp³d',
     name: 'sp³d',
     icon: 'Pentagon',
     count: 4
   },
   {
-    id: 'sp3d2',
+    id: 'sp³d²',
     name: 'sp³d²',
     icon: 'Hexagon',
     count: 3
@@ -85,7 +85,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     description: 'Trois liaisons et un doublet non liant formant une pyramide'
   },
   {
-    id: 'angular-sp3',
+    id: 'angular-sp³',
     hybridization: 'sp³',
     class: 'AB₂E₂',
     shape: 'Angulaire Plane',
@@ -125,7 +125,7 @@ export const molecularGeometries: MolecularGeometry[] = [
     description: 'Trois liaisons formant un T avec deux doublets non liants'
   },
   {
-    id: 'linear-sp3d',
+    id: 'linear-sp³d',
     hybridization: 'sp³d',
     class: 'AB₂E₃',
     shape: 'Linéaire',

@@ -12,7 +12,7 @@ function App() {
           <Dashboard />
         </main>
         <footer className="py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>FrenchMemory — Apprenez le français efficacement</p>
+          <p>ChemGeometry</p>
         </footer>
       </div>
     </AppProvider>

@@ -90,8 +90,8 @@ const MatchingMode: React.FC = () => {
         if (newMatchedPairs === 8) {
           setIsGameComplete(true);
           updateProgress({
-            completedSessions: prev => prev + 1,
-            totalStudied: prev => prev + 8
+            completedSessions: (typeof updateProgress === 'function' ? 1 : 0),
+            totalStudied: 8
           });
         }
       } else {

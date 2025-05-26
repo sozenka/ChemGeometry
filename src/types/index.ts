@@ -7,8 +7,6 @@ export interface MolecularGeometry {
   polarity: 'polaire' | 'non polaire';
   imageUrl: string;
   description?: string;
-  favorite?: boolean;
-  difficulty?: 1 | 2 | 3;
   lastReviewed?: number;
   correctCount?: number;
   incorrectCount?: number;

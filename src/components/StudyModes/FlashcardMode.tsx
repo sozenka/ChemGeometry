@@ -4,7 +4,7 @@ import { useAppContext } from '../../context/AppContext';
 import { MolecularGeometry } from '../../types';
 
 const FlashcardMode: React.FC = () => {
-  const { filteredGeometries, favoriteGeometry, setGeometryDifficulty } = useAppContext();
+  const { filteredGeometries } = useAppContext();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [currentGeometries, setCurrentGeometries] = useState<MolecularGeometry[]>([]);
@@ -50,18 +50,6 @@ const FlashcardMode: React.FC = () => {
         setCurrentIndex(currentIndex + 1);
         setIsAnimating(false);
       }, 300);
-    }
-  };
-
-  const handleFavorite = () => {
-    if (currentGeometry) {
-      favoriteGeometry(currentGeometry.id);
-    }
-  };
-
-  const handleDifficulty = (level: 1 | 2 | 3) => {
-    if (currentGeometry) {
-      setGeometryDifficulty(currentGeometry.id, level);
     }
   };
 
@@ -173,56 +161,6 @@ const FlashcardMode: React.FC = () => {
           <ChevronLeft className="h-6 w-6" />
         </button>
         
-        <div className="flex space-x-3">
-          <button 
-            onClick={handleFavorite}
-            className={`p-2 rounded-full ${
-              currentGeometry.favorite 
-                ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400' 
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 hover:text-yellow-600 dark:hover:text-yellow-400'
-            }`}
-            aria-label="Favoris"
-          >
-            <Star className="h-5 w-5" fill={currentGeometry.favorite ? "currentColor" : "none"} />
-          </button>
-          
-          <button 
-            onClick={() => handleDifficulty(1)}
-            className={`p-2 rounded-full ${
-              currentGeometry.difficulty === 1 
-                ? 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400' 
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-green-50 dark:hover:bg-green-900/20 hover:text-green-600 dark:hover:text-green-400'
-            }`}
-            aria-label="Facile"
-          >
-            <HeartPulse className="h-5 w-5" />
-          </button>
-          
-          <button 
-            onClick={() => handleDifficulty(2)}
-            className={`p-2 rounded-full ${
-              currentGeometry.difficulty === 2 
-                ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400' 
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:text-orange-600 dark:hover:text-orange-400'
-            }`}
-            aria-label="Moyen"
-          >
-            <HeartPulse className="h-5 w-5" />
-          </button>
-          
-          <button 
-            onClick={() => handleDifficulty(3)}
-            className={`p-2 rounded-full ${
-              currentGeometry.difficulty === 3 
-                ? 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400' 
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-600 dark:hover:text-red-400'
-            }`}
-            aria-label="Difficile"
-          >
-            <HeartPulse className="h-5 w-5" />
-          </button>
-        </div>
-        
         <button 
           onClick={handleNextCard}
           disabled={currentIndex === currentGeometries.length - 1}
@@ -237,7 +175,7 @@ const FlashcardMode: React.FC = () => {
         </button>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .perspective-1000 {
           perspective: 1000px;
         }

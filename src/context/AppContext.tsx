@@ -11,8 +11,6 @@ interface AppContextType {
   setCurrentMode: (mode: StudyMode) => void;
   userProgress: UserProgress;
   updateProgress: (data: Partial<UserProgress>) => void;
-  favoriteGeometry: (id: string) => void;
-  setGeometryDifficulty: (id: string, difficulty: 1 | 2 | 3) => void;
   filteredGeometries: MolecularGeometry[];
   setSearchTerm: (term: string) => void;
   isDarkMode: boolean;
@@ -70,28 +68,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setUserProgress(prev => ({ ...prev, ...data }));
   };
 
-  const favoriteGeometry = (id: string) => {
-    const updatedGeometries = molecularGeometries.map(geometry => {
-      if (geometry.id === id) {
-        return { ...geometry, favorite: !geometry.favorite };
-      }
-      return geometry;
-    });
-    console.log('Geometry favorited:', id);
-  };
-
-  const setGeometryDifficulty = (id: string, difficulty: 1 | 2 | 3) => {
-    const updatedGeometries = molecularGeometries.map(geometry => {
-      if (geometry.id === id) {
-        return { ...geometry, difficulty };
-      }
-      return geometry;
-    });
-    console.log('Geometry difficulty set:', id, difficulty);
-  };
-
   const toggleDarkMode = () => {
-    setIsDarkMode(prev => !prev);
+    setIsDarkMode((prev: any) => !prev);
   };
 
   return (
@@ -105,8 +83,6 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         setCurrentMode,
         userProgress,
         updateProgress,
-        favoriteGeometry,
-        setGeometryDifficulty,
         filteredGeometries,
         setSearchTerm,
         isDarkMode,

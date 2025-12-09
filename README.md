@@ -105,7 +105,7 @@ ChemGeometry/
 The application covers key concepts in molecular geometry including:
 
 - **Hybridization types**: sp, sp², sp³, sp³d, sp³d²
-- **Molecular classes**: AB₂, AB₃, AB₄, etc.
+- **Molecular classes**: AB<sub>2</sub>, AB<sub>3</sub>, AB<sub>4</sub>, etc.
 - **Bond angles**: 180°, 120°, 109.5°, etc.
 - **Polarity**: Polar and non-polar molecules
 - **3D shapes**: Linear, trigonal planar, tetrahedral, octahedral, and more
@@ -122,7 +122,7 @@ Contributions are welcome! If you'd like to contribute to ChemGeometry:
 
 ## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source.
 
 ## 👤 Author
 
